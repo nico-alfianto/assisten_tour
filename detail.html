@@ -415,7 +415,31 @@ const fav=document.getElementById("favBtn");
 
 fav.onclick=function(){
 
-alert("Destinasi ditambahkan ke Favorite ❤️");
+let favorites=JSON.parse(localStorage.getItem("favorites"))||[];
+
+if(!favorites.find(item=>item.id===id)){
+
+favorites.push({
+
+id:id,
+
+title:data[id].title,
+
+image:data[id].image,
+
+location:data[id].location
+
+});
+
+localStorage.setItem("favorites",JSON.stringify(favorites));
+
+alert("Berhasil ditambahkan ke Favorite ❤️");
+
+}else{
+
+alert("Destinasi sudah ada di Favorite.");
+
+}
 
 };
 
