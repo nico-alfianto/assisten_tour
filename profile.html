@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Profile | Assisten Tour</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+body{
+
+background:#f5f7fb;
+
+padding-bottom:90px;
+
+font-family:'Poppins',sans-serif;
+
+}
+
+header{
+
+background:linear-gradient(135deg,#0ea5e9,#2563eb);
+
+height:220px;
+
+border-bottom-left-radius:35px;
+
+border-bottom-right-radius:35px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+color:white;
+
+}
+
+.avatar{
+
+width:110px;
+
+height:110px;
+
+border-radius:50%;
+
+background:white;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:48px;
+
+color:#0ea5e9;
+
+font-weight:bold;
+
+margin-bottom:15px;
+
+}
+
+.container{
+
+padding:20px;
+
+max-width:900px;
+
+margin:auto;
+
+}
+
+.stats{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:15px;
+
+margin-bottom:30px;
+
+}
+
+.stat{
+
+background:white;
+
+padding:20px;
+
+border-radius:15px;
+
+text-align:center;
+
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.stat h2{
+
+color:#0ea5e9;
+
+margin-bottom:5px;
+
+}
+
+.menu{
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.menu a{
+
+background:white;
+
+padding:18px;
+
+border-radius:15px;
+
+text-decoration:none;
+
+color:#333;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.menu a:hover{
+
+transform:translateX(6px);
+
+}
+
+.logout{
+
+margin-top:30px;
+
+width:100%;
+
+padding:16px;
+
+border:none;
+
+border-radius:15px;
+
+background:#ef4444;
+
+color:white;
+
+font-size:16px;
+
+cursor:pointer;
+
+}
+
+.bottom-nav{
+
+position:fixed;
+
+bottom:0;
+
+left:0;
+
+width:100%;
+
+background:white;
+
+display:flex;
+
+justify-content:space-around;
+
+padding:15px 0;
+
+box-shadow:0 -5px 20px rgba(0,0,0,.1);
+
+}
+
+.bottom-nav a{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+text-decoration:none;
+
+color:#777;
+
+font-size:13px;
+
+}
+
+.bottom-nav a.active{
+
+color:#0ea5e9;
+
+}
+
+.bottom-nav i{
+
+font-size:22px;
+
+margin-bottom:5px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="avatar">
+
+N
+
+</div>
+
+<h2>Nico Alfianto</h2>
+
+<p>Travel Enthusiast</p>
+
+</header>
+
+<div class="container">
+
+<div class="stats">
+
+<div class="stat">
+
+<h2>8</h2>
+
+<p>Destinations</p>
+
+</div>
+
+<div class="stat">
+
+<h2>4</h2>
+
+<p>Favorites</p>
+
+</div>
+
+<div class="stat">
+
+<h2>12</h2>
+
+<p>Trips</p>
+
+</div>
+
+</div>
+
+<div class="menu">
+
+<a href="#">
+
+<span>
+
+<i class="fa-solid fa-user"></i>
+
+&nbsp; Edit Profile
+
+</span>
+
+<i class="fa-solid fa-chevron-right"></i>
+
+</a>
+
+<a href="#">
+
+<span>
+
+<i class="fa-solid fa-location-dot"></i>
+
+&nbsp; My Trips
+
+</span>
+
+<i class="fa-solid fa-chevron-right"></i>
+
+</a>
+
+<a href="#">
+
+<span>
+
+<i class="fa-solid fa-gear"></i>
+
+&nbsp; Settings
+
+</span>
+
+<i class="fa-solid fa-chevron-right"></i>
+
+</a>
+
+<a href="about.html">
+
+<span>
+
+<i class="fa-solid fa-circle-info"></i>
+
+&nbsp; About App
+
+</span>
+
+<i class="fa-solid fa-chevron-right"></i>
+
+</a>
+
+</div>
+
+<button class="logout" onclick="logout()">
+
+Logout
+
+</button>
+
+</div>
+
+<nav class="bottom-nav">
+
+<a href="home.html">
+
+<i class="fa-solid fa-house"></i>
+
+<span>Home</span>
+
+</a>
+
+<a href="favorite.html">
+
+<i class="fa-solid fa-heart"></i>
+
+<span>Favorite</span>
+
+</a>
+
+<a href="profile.html" class="active">
+
+<i class="fa-solid fa-user"></i>
+
+<span>Profile</span>
+
+</a>
+
+<a href="about.html">
+
+<i class="fa-solid fa-circle-info"></i>
+
+<span>About</span>
+
+</a>
+
+</nav>
+
+<script>
+
+function logout(){
+
+if(confirm("Yakin ingin logout?")){
+
+window.location.href="login.html";
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
