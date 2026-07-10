@@ -304,6 +304,8 @@ footer{
     height:160px;
 }
 
+}
+
 /* ==========================
    Scroll Reveal Animation
 ========================== */
@@ -318,5 +320,66 @@ footer{
     opacity:1;
     transform:translateY(0);
 }   
+
+/* ==============================
+   DARK MODE
+============================== */
+
+body.dark-mode{
+    background:#121212 !important;
+    color:#f5f5f5 !important;
+    transition:.3s;
+}
+
+body.dark-mode header{
+    background:linear-gradient(135deg,#1f2937,#111827)!important;
+}
+
+body.dark-mode .card,
+body.dark-mode .login-card,
+body.dark-mode .register-card,
+body.dark-mode .stat,
+body.dark-mode .menu a,
+body.dark-mode .bottom-nav{
+
+    background:#1e1e1e!important;
+    color:#ffffff!important;
+
+}
+
+body.dark-mode input{
+
+    background:#2d2d2d!important;
+    color:white!important;
+    border:1px solid #444!important;
+
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode label{
+
+    color:white!important;
+
+}
+
+body.dark-mode .location{
+
+    color:#cfcfcf!important;
+
+}
+
+body.dark-mode .description{
+
+    color:#d9d9d9!important;
+
+}
+
+body.dark-mode .bottom-nav{
+
+border-top:1px solid #333;
 
 }
